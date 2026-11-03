@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Organizador personal de las vacaciones en Villa Berna, Córdoba."
+    />
+    <meta name="theme-color" content="#18231f" />
+    <title>Vacaciones en Villa Berna</title>
+    <link rel="stylesheet" href="src/style.css" />
+
+    <!-- FAVICON: guardá tu imagen en public/favicon.png y descomentá esta línea. -->
+    <link rel="icon" type="image/png" href="/favicon/favicon.png" />
+
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand__mark" aria-hidden="true">V</span>
+          <span>Vacaciones <span class="brand__light">2026</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#inicio">Cuenta regresiva</a>
+          <a href="#calendario">Calendario</a>
+          <a href="#destinos">Destinos</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECCIÓN 1: CUENTA REGRESIVA Y CLIMA -->
+      <section
+        id="inicio"
+        class="page-section countdown-section"
+        aria-labelledby="countdown-title"
+      >
+        <div class="section-content countdown-content">
+          <p class="eyebrow">VILLA BERNA · CÓRDOBA · ARGENTINA</p>
+          <h1 id="countdown-title">
+            La próxima aventura<br />
+            está cada vez más cerca
+          </h1>
+          <p class="section-lead">
+            La cuenta regresiva termina el sábado 28 de noviembre de 2026 a las 08:00.
+          </p>
+
+          <div class="countdown" aria-label="Cuenta regresiva">
+            <div class="countdown__unit">
+              <span class="countdown__number" id="countdown-days">0</span>
+              <span class="countdown__label">Días</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__number" id="countdown-hours">00</span>
+              <span class="countdown__label">Horas</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__number" id="countdown-minutes">00</span>
+              <span class="countdown__label">Minutos</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__number" id="countdown-seconds">00</span>
+              <span class="countdown__label">Segundos</span>
+            </div>
+          </div>
+          <p class="countdown-message" id="countdown-message" aria-live="polite"></p>
+
+          <div class="weather-panel" role="region" aria-labelledby="weather-title">
+            <div class="weather-panel__heading">
+              <div>
+                <p class="eyebrow eyebrow--small">PRONÓSTICO</p>
+                <h2 id="weather-title">El tiempo en Villa Berna</h2>
+                <p class="weather-location">Villa Berna, Córdoba</p>
+              </div>
+              <button
+                class="refresh-button"
+                id="weather-refresh"
+                type="button"
+                aria-label="Actualizar el pronóstico"
+                title="Actualizar el pronóstico"
+              >
+                <span aria-hidden="true">↻</span>
+              </button>
+            </div>
+
+            <div class="weather-current" aria-live="polite">
+              <div class="weather-current__main">
+                <span class="weather-current__icon" id="current-icon" aria-hidden="true">…</span>
+                <div>
+                  <p class="weather-current__temperature" id="current-temperature">--°</p>
+                  <p class="weather-current__description" id="current-description">
+                    Consultando el clima…
+                  </p>
+                </div>
+              </div>
+              <div class="weather-current__details">
+                <p>Sensación térmica <strong id="current-feels-like">--°</strong></p>
+                <p>Humedad <strong id="current-humidity">--%</strong></p>
+                <p>Viento <strong id="current-wind">-- km/h</strong></p>
+              </div>
+            </div>
+
+            <div class="forecast-heading">
+              <h3>Próximos cinco días</h3>
+              <p id="weather-status" class="weather-status" role="status">
+                Consultando información meteorológica…
+              </p>
+            </div>
+            <div class="forecast-grid" id="weather-forecast" aria-live="polite">
+              <p class="weather-placeholder">Cargando pronóstico…</p>
+            </div>
+            <p class="weather-attribution">
+              Datos meteorológicos:
+              <a
+                id="weather-source-link"
+                href="https://open-meteo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Open-Meteo</a>.
+              Pronóstico sujeto a cambios.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: CALENDARIO EDITABLE DESDE main.js -->
+      <section
+        id="calendario"
+        class="page-section calendar-section"
+        aria-labelledby="calendar-title"
+      >
+        <div class="section-content">
+          <p class="eyebrow">DEL 28 DE NOVIEMBRE AL 6 DE DICIEMBRE</p>
+          <h2 class="section-title" id="calendar-title">Nuestro calendario</h2>
+          <p class="section-lead">
+            Cada día tiene su resumen. Tocá una fecha para abrir el itinerario completo.
+          </p>
+          <div class="calendar-grid" id="calendar-grid">
+            <p class="empty-state">Preparando el calendario…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: DESTINOS INDEPENDIENTES DEL CALENDARIO -->
+      <section
+        id="destinos"
+        class="page-section destinations-section"
+        aria-labelledby="destinations-title"
+      >
+        <div class="section-content">
+          <p class="eyebrow">LUGARES PARA TENER A MANO</p>
+          <h2 class="section-title" id="destinations-title">Destinos y lugares</h2>
+          <p class="section-lead">
+            Una guía independiente con ubicaciones, páginas y datos útiles de las vacaciones.
+          </p>
+          <div class="destinations-grid" id="destinations-grid">
+            <p class="empty-state">Preparando los destinos…</p>
+          </div>
+        </div>
+        <footer class="site-footer">
+          <span>Vacaciones 2026</span>
+          <a href="#inicio">Volver arriba ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <!-- VENTANA DE DETALLE DEL DÍA -->
+    <div class="day-modal" id="day-modal" hidden>
+      <div class="day-modal__backdrop" data-close-modal></div>
+      <div
+        class="day-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-date"
+        tabindex="-1"
+      >
+        <div class="day-modal__topline">
+          <p class="eyebrow eyebrow--small">DETALLE DEL DÍA</p>
+          <button
+            class="modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Cerrar ventana"
+          >
+            ×
+          </button>
+        </div>
+        <p class="modal-date" id="modal-date"></p>
+        <h2 id="modal-title">Itinerario</h2>
+        <div class="modal-content" id="modal-content"></div>
+      </div>
+      <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
