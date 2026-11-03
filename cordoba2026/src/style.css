@@ -18,7 +18,7 @@
 
 
 
-   --background-countdown:yellow; /* Este yellow es provisorio, luego lo cambio */
+   --background-countdown:url("/images/fondo-contador.jpg");
 
 
 
@@ -650,7 +650,7 @@ a {
 
 
 
-  margin: 0 auto;
+  margin: 5vh auto;
 
 
 

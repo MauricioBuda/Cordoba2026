@@ -10,7 +10,7 @@ const CONFIG = {
   timezone: "America/Argentina/Cordoba",
   countdownMessages: {
     // Escribí cada mensaje entre comillas. Si lo dejás vacío, no se muestra texto.
-    before15Days: "Paciancia amor mio", // Mensaje inicial: hasta que falten 15 días.
+    before15Days: "Paciencia amor mio", // Mensaje inicial: hasta que falten 15 días.
     fifteenDays: "Ya menos de 15 días je", // Se muestra al entrar en los últimos 15 días.
     tenDays: "Menos de 10 dias pituca!", // Se muestra al entrar en los últimos 10 días.
     sevenDays: "Una semanita para desconectarrr", // Se muestra al entrar en los últimos 7 días.
