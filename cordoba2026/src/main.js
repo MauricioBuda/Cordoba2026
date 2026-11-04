@@ -10,7 +10,7 @@ const CONFIG = {
   timezone: "America/Argentina/Cordoba",
   countdownMessages: {
     // Escribí cada mensaje entre comillas. Si lo dejás vacío, no se muestra texto.
-    before15Days: "Paciencia amor mio ❤️", // Mensaje inicial: hasta que falten 15 días.
+    before15Days: "❤️ Paciencia amor mio ❤️", // Mensaje inicial: hasta que falten 15 días.
     fifteenDays: "Ya menos de 15 días je", // Se muestra al entrar en los últimos 15 días.
     tenDays: "Menos de 10 dias pituca!", // Se muestra al entrar en los últimos 10 días.
     sevenDays: "Una semanita para desconectarrr", // Se muestra al entrar en los últimos 7 días.
@@ -80,10 +80,10 @@ const destinations = [
   {
     id: "alojamiento-villa-berna",
     category: "Alojamiento",
-    name: "Alojamiento en Villa Berna",
-    description: "Completá este texto con el nombre y los datos del alojamiento.",
-    locationUrl: "",
-    websiteUrl: "",
+    name: "'La Macarena'",
+    description: "Cabaña en la monntaña, Villa Berna",
+    locationUrl: "https://maps.app.goo.gl/QwJrthibn3m1pxkS8",
+    websiteUrl: "https://www.instagram.com/la_macarena_cordoba/",
   },
 ];
 
