@@ -4101,6 +4101,8 @@ a:focus-visible {
 
   .eyebrow {
 
+    text-align: center;
+
     color: var(--accent-strong);
 
 
@@ -4125,6 +4127,8 @@ a:focus-visible {
 
 
   h1 {
+
+    text-align: center;
 
 
 
