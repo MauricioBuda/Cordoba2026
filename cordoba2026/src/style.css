@@ -678,7 +678,7 @@ a {
 
 
 
-  color: var(--accent-strong);
+  color: #575654!important;
 
 
 
@@ -3835,7 +3835,7 @@ a:focus-visible {
 
 
 
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 1.42);
 
 
 
@@ -4101,6 +4101,7 @@ a:focus-visible {
 
   .eyebrow {
 
+    color: var(--accent-strong);
 
 
     margin-bottom: 7px;
@@ -4263,11 +4264,13 @@ a:focus-visible {
 
 
 
-    margin: 7px 30vw 10px;
+    margin: 8px auto;
 
 
 
-    font-size: 0.84rem;
+    font-size: 6vw;
+
+    text-align: center;
 
 
 
@@ -5276,6 +5279,10 @@ a:focus-visible {
 
 
 @media (max-width: 700px) and (max-height: 760px) {
+
+  .countdown-message {
+    font-size: 5vw!important;
+  }
 
 
 
